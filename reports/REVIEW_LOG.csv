@@ -1,0 +1,12 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0099.jpg,xe nhỏ/tối phía giữa-trái khung hình (~17px cao),added,Thấy thân xe rõ dù nhỏ và tối màu, đủ ranh giới theo HUONG_DAN.txt (thêm box cho xe mô hình bỏ sót, thường xe nhỏ/tối/bị che)
+1,frame_0099.jpg,xe phía dưới-giữa khung hình (xe lớn ở gần),added,AI bỏ sót hoàn toàn xe này dù ở gần camera, thấy rõ toàn bộ thân xe
+1,frame_0099.jpg,xe giữa khung hình gần dải phân cách,added,Thấy đủ đèn và một phần thân xe, đủ điều kiện gán theo guideline
+1,frame_0099.jpg,xe nhỏ phía giữa-trái (làn xa),added,Xe mờ do khoảng cách xa, vẫn thấy rõ cụm đèn và viền thân xe
+1,frame_0099.jpg,xe nhỏ phía giữa-trái (làn xa, cạnh xe trên),added,Tương tự trường hợp trên, xe nhỏ bị AI bỏ sót do xa camera
+1,frame_0099.jpg,xe nhỏ phía giữa khung hình,added,Kích thước nhỏ nhưng trên ngưỡng 16px, đủ điều kiện gán theo guideline
+1,frame_0099.jpg,xe nhỏ phía giữa khung hình (cạnh xe trên),added,Đèn mờ hơn các xe lân cận nên AI không nhận diện được
+1,frame_0099.jpg,xe nhỏ phía giữa-trái gần rìa ảnh,added,Xe ở gần mép khung hình, một phần thân bị cắt nhưng vẫn đủ ranh giới để gán
+1,frame_0312.jpg,box AI vẽ ở vùng phải-giữa khung hình không khớp xe thật,removed,Nghi là vệt sáng đèn đường/phản chiếu bị AI nhận nhầm thành xe, không thấy thân xe thật ở vị trí đó
+1,frame_0326.jpg,box AI vẽ hơi lệch/to hơn thân xe ở vùng giữa khung hình,edited,Thu nhỏ và canh lại box ôm sát thân xe theo guideline (không tính viền hào quang đèn)
+1,"frame_0107.jpg; frame_0182.jpg; frame_0187.jpg; frame_0227.jpg; frame_0270.jpg; frame_0331.jpg; frame_0369.jpg; frame_0380.jpg; frame_0392.jpg",tổng hợp các box còn lại trong 9 ảnh khác của lô round 1,added,"Thêm box cho các xe nhỏ/tối/bị che mà mô hình cold start bỏ sót (tổng cộng 43 box thêm mới trên 9 ảnh này, tính tự động qua đối chiếu prelabel vs nhãn CVAT xuất ra — xem outputs/round1_diff.md để có mô tả từng box)"
